@@ -17,7 +17,7 @@ export async function countCommentsByPost(): Promise<Record<number, number>> {
       }
 
       const postId = comment.postId;
-      
+      counts[postId] = (counts[postId] ?? 0) + 1;
       return counts;
     }, {});
   } catch {
