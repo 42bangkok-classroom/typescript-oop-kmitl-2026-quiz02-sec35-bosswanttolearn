@@ -1,4 +1,3 @@
-export function getPostsByUser() {}
 import axios from "axios";
 
 type Post = {
