@@ -20,7 +20,7 @@ export async function safeFetchComment(
 
     const result = (["id", "body"] as const).reduce<Pick<Comment, "id" | "body">>(
       (acc, key) => {
-       acc[key] = data[key]; 
+        acc[key] = data[key];
         return acc;
       },
       { id: data.id, body: data.body }
